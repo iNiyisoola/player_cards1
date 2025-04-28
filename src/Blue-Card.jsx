@@ -1,29 +1,26 @@
 
-function Card(props){
+function BlueCard(props){
 
-  const calculateOverall = () =>{
+  const CreateOverall = () => {
     const stats = [
-                  props.attack, 
-                  props.speed, 
-                  props.technique, 
-                  props.shooting, 
-                  props.passing, 
-                  props.dribbling, 
-                  props.defence
-                  ];
-
+                    props.attack,
+                    props.speed, 
+                    props.technique, 
+                    props.shooting, 
+                    props.passing, 
+                    props.dribbling, 
+                    props.defence
+                  ]
     const numbers = stats.map(stat => parseInt(stat.replace('%', '')));
-    const sum = numbers.reduce((a, b) => a + b, 0);
+    const sum = numbers.reduce((a , b) => a + b, 0);
     const average = Math.round(sum / numbers.length);
-    return `${average}%`;
+    return `${average}`;
   }
-
-  const overall = calculateOverall();
-
+  const overall = CreateOverall();
 
   return(
     <>
-      <div className="player-card">
+      <div className="blue-player-card">
         <div className="image-stats-div">
           {/* <span className="image-div"> */}
             <img className="player-image" src={props.playerImage} alt=""></img>
@@ -36,18 +33,19 @@ function Card(props){
             <p className="stats"><strong>PAS: </strong> {props.passing}</p>
             <p className="stats"><strong>DRB: </strong> {props.dribbling}</p>
             <p className="stats"><strong>DEF: </strong> {props.defence}</p>
+            <div className="overallRating">
+              <p className="overall"><strong>{overall}</strong> </p>
+            </div>
           </div>
+          
+
         </div>
         <div className="player-name">
           <span className="player-first-name">{props.playerFirstName}</span> 
           <span className="player-last-name">{props.playerLastName}</span>
         </div>
-        <span>{overall}</span>
-
       </div>
-
-      {}
     </>
   );
 }
-export default Card
+export default BlueCard

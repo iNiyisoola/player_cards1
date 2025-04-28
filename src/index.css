@@ -1,4 +1,4 @@
-.player-card{
+.gold-player-card{
   background-color: hsl(51, 100%, 63%);
   font-family: arial, sans-serif;
   border-radius: 10px;
@@ -9,43 +9,58 @@
   margin: 20px;
   display: inline-block;
 }
-.player-card .image-stats-div{
+.image-stats-div{
   display: flex;
 }
-/* .player-card .image-div{
-  margin: 0;
-} */
-.player-card .stats-div{
-  margin: 10px;
-  margin-left: 20px;
-  width: 30%;
-}
-.player-card .player-image{
+.player-image{
   width: 60%;
   height: auto;
   border-radius: 20px;
   border: none;
   margin: 0;
 }
-.player-card .player-name{
+.player-name{
   font-size: large;
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.player-card .player-name .player-last-name{
+.player-name .player-last-name{
   margin-left: 5px;
   margin-right: 50px;
   text-transform: uppercase;
   font-weight: 600;
 }
-.player-card .stats-div{
+.stats-div{
+  /* margin: 10px; */
+  margin-left: 20px;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
-  /* margin-top: 5px; */
+  margin-top: 5px;
   text-align: end;
   align-content: center;
 }
-.player-card .stats-div .stats{
-  margin: 1px;
+.stats-div .stats{
+  margin: 2px;
   font-size: 14px;
+}
+.stats-div .overall{
+  margin: 0;
+  font-size: 2.5rem;
+}
+.stats-div .overallRating{
+  margin-top: 30px;
+}
+
+/* blue player card*/
+.blue-player-card{
+  background-color: hsl(210, 98%, 64%);
+  font-family: arial, sans-serif;
+  border-radius: 10px;
+  border: 1px solid hsla(0, 0%, 4%, 0.916);
+  box-shadow: 5px 5px 5px hsla(0, 0%, 80%, 0.1);
+  max-width: 250px;
+  padding: 10px;
+  margin: 20px;
+  display: inline-block;
 }
